@@ -1,0 +1,17 @@
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .counter {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: 22px;
+  }
+  

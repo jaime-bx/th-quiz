@@ -1,0 +1,13 @@
+.range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 0 15px;
+    height: 45px;
+  }
+  .tip {
+    text-align: right;
+  }

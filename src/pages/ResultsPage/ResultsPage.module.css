@@ -1,0 +1,60 @@
+.headerText {
+  font-weight: bold;
+}
+.gradient {
+  background: linear-gradient(90deg, #fff, rgba(78, 181, 43, 0.4));
+}
+.imgThumbLeft {
+  text-align: left;
+}
+.imgThumbRight {
+  text-align: right;
+}
+.resultImages {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../assets/result.svg");
+  background-size: auto 40%;
+  display: grid;
+  grid-gap: 0.25rem;
+  -ms-grid-columns: 1fr 0.25rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+.thumb {
+  background-color: #e5e4e0;
+  margin: 10px 0;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 18px;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.datesBefore {
+  text-align: left;
+  margin-top: 20px;
+}
+.datesBefore div {
+  display: inline-block;
+  background: #222;
+  padding: 4px 6px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+}
+.datesAfter {
+  text-align: right;
+  margin-top: 20px;
+}
+.datesAfter div {
+  display: inline-block;
+  background: #222;
+  padding: 4px 6px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+}

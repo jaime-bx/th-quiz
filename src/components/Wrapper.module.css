@@ -1,0 +1,13 @@
+.wrapper {
+  max-width: 580px;
+  background-color: #fff;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 10px;
+}
+@media screen and (min-width: 601px) {
+  .wrapper {
+    padding: 20px;
+  }
+}
