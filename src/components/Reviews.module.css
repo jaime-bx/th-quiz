@@ -1,0 +1,41 @@
+.title {
+  margin: 0;
+  font-size: 32px;
+}
+.ratingTitle {
+  font-size: 65px;
+}
+.review:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0;
+}
+.review {
+  padding: 10px;
+  text-align: left;
+}
+.review svg {
+    width: 20px;
+    height: 20px;
+}
+.reviewData {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.reviewName {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+.verified {
+  display: inline-block;
+  -webkit-padding-start: 0.25rem;
+  padding-inline-start: 0.25rem;
+  -webkit-padding-end: 0.25rem;
+  padding-inline-end: 0.25rem;
+  font-size: 12px;
+  border-radius: 0.125rem;
+  font-weight: 500;
+  background: #c6f6d5;
+  color: #22543d;
+}

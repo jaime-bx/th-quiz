@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import s from "./ResultsPage.module.css";
 import img6_7 from "../../assets/q1/6_7.png";
+import th_img from "../../assets/th_img.png";
 import Wrapper from "../../components/Wrapper";
 import ResultsGraphic from "../../components/ResultsGraphic";
+import Reviews from "../../components/Reviews";
+import reviewsData from "../../reviewsData"
 
 const ResultsPage = () => {
   const [data, setData] = useState({});
@@ -23,6 +26,13 @@ const ResultsPage = () => {
     month: "long",
     day: "numeric",
   });
+  const nextDay = new Date();
+  nextDay.setDate(nextDay.getDate() + 1);
+  const formattedNextday = nextDay.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   useEffect(() => {
     const results = JSON.parse(sessionStorage.getItem("quizData"));
@@ -32,7 +42,7 @@ const ResultsPage = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <Wrapper>
         <p className={s.headerText}>
           Once you start using Tinder Hero, you’ll be able to increase your
@@ -47,7 +57,7 @@ const ResultsPage = () => {
               <img src={data.currentImage} alt="" />
             </div>
             <div className={s.thumb}>Now</div>
-            <div>
+            <div className={s.text}>
               <div>Penis Length</div>
               <div className={s.red}>{data.currentLength} inches</div>
             </div>
@@ -65,7 +75,7 @@ const ResultsPage = () => {
               <b>11 days later</b>
             </div>
             <div>
-              <div>
+              <div className={s.text}>
                 <b>Penis Length</b>
               </div>
               <div className={s.green}>
@@ -84,7 +94,33 @@ const ResultsPage = () => {
           endValue={data.desiredLength}
         />
       </Wrapper>
-    </>
+      <h3 className={s.recTitle}>Your personal product recommendation</h3>
+      <div className={s.recommendation}>
+        <div className={s.recTextWrapper}>
+        <h4 className={s.recCardTitle}>Best Offer</h4>
+        <p className={s.recText}>
+          <span className={s.mb10}>
+            You’re part of the{" "}
+            <span className={s.gradient}>
+              <b>target audience!</b>
+            </span>
+          </span>
+          <br />
+          Users aged {data.age - 5} - {data.age + 5} are entitled to a{" "}
+          <b>50% discount</b> for Tinder Hero if they place an order before{" "}
+          <span className={s.gradient}>
+            <b>{formattedNextday.slice(0, formattedNextday.indexOf(","))}</b>
+          </span>
+        </p>
+        </div>
+        <div className={s.recImg}>
+          <img src={th_img} alt="" />
+        </div>
+      </div>
+      <div className={s.linkWrapper}><a href="https://www.thetinderhero.com">Get Your Discount</a></div>
+      <Reviews data={reviewsData} />
+      <div className={s.linkWrapper}><a href="https://www.thetinderhero.com">Get Your Discount</a></div>
+    </div>
   );
 };
 

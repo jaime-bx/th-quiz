@@ -26,13 +26,16 @@
   margin: 10px 0;
   padding: 0.5rem;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
 }
 .red {
+  font-size: 20px;
   color: red;
 }
 .green {
+  font-size: 20px;
   color: green;
+  font-weight: bold;
 }
 .datesBefore {
   text-align: left;
@@ -57,4 +60,64 @@
   border-radius: 5px;
   color: white;
   font-size: 15px;
+}
+.text {
+  font-size: 20px;
+}
+.recTitle {
+  font-size: 24px;
+}
+.recommendation {
+  background: #fff;
+  padding: 0.75rem;
+  border: 3px solid #4eb52b;
+  border-radius: 0.5rem;
+}
+.recCardTitle {
+  font-size: 32px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.recText {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.mb10 {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.recImg img {
+  width: 200px;
+}
+
+.linkWrapper {
+  margin: 25px auto 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  background-color: #4eb52b;
+  padding: 14px 0;
+  width: 70%;
+  cursor: pointer;
+}
+.linkWrapper:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+@media screen and (min-width: 601px) {
+  .recommendation {
+    max-width: 580px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .recTitle {
+    font-size: 28px;
+  }
+  .recImg img {
+    width: 150px;
+  }
 }
