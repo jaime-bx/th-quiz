@@ -6,6 +6,13 @@ import Wrapper from "../../components/Wrapper";
 
 
 const WelcomePage = () => {
+  const nextDay = new Date();
+  nextDay.setDate(nextDay.getDate() + 1);
+  const formattedNextday = nextDay.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <Wrapper>
       <div className={s.titles}>
@@ -23,7 +30,7 @@ const WelcomePage = () => {
           <img src={img} alt="img" />
         </div>
         <div className={s.text}>
-          <p className={s.contentTitle}>A unique offer only until March 6</p>
+          <p className={s.contentTitle}>A unique offer only until {formattedNextday.slice(0, formattedNextday.indexOf(","))}</p>
           <p className={s.contentSubtitle}>
             Get a large discount for Tinder Hero after taking a test. <br /> Your
             test results will help Dr. Thomas Weaver conclude his study to
