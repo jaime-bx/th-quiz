@@ -43,6 +43,12 @@ const data = [
     text: "It works exceptionally well, and the pills aren’t too big to swallow (that’s always been an issue for me). Just think, one bottle of this and my girl now stares at me in a totally new way. She’s constantly trying to get in my pants now.",
   },
   {
+    id: 7,
+    name: "Bob",
+    date: "Feb 12, 2025",
+    rating: 4,
+  },
+  {
     id: 8,
     name: "Kevin",
     date: "Feb 2, 2025",
