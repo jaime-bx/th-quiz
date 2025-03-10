@@ -18,4 +18,24 @@
   .subtitle {
     font-size: 22px;
   }
-  
+  .button {
+    margin: 10px auto 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    background-color: #4eb52b;
+    padding: 14px 0;
+    width: 100%;
+    cursor: pointer;
+}
+.button:disabled {
+   background-color: #d1d5db;
+   border: none;
+   cursor: not-allowed;
+}
+.button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

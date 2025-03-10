@@ -9,10 +9,10 @@ import Button from "../../components/Button";
 import Hint from "../../components/Hint";
 
 const Q2 = () => {
-  const [desiredLength, setDesiredLength] = useState(5.4);
+  const [increaseLength, setIncreaseLength] = useState(5.4);
   const [age, setAge] = useState(54);
 
-  const handleChangeLength = (e) => setDesiredLength(e.target.value);
+  const handleChangeLength = (e) => setIncreaseLength(e.target.value);
   const handleChangeAge = (e) => setAge(e.target.value);
 
   const currentState = JSON.parse(sessionStorage.getItem("quizData"));
@@ -20,7 +20,7 @@ const Q2 = () => {
   const handleClick = () =>
     sessionStorage.setItem(
       "quizData",
-      JSON.stringify({ ...currentState, desiredLength, age })
+      JSON.stringify({ ...currentState, increaseLength, age })
     );
 
   return (
@@ -50,11 +50,11 @@ const Q2 = () => {
         </p>
         <RangeSlider
           handleChange={handleChangeLength}
-          tip="Desired length (inches)"
-          min={3.8}
-          max={6.9}
+          tip="Increase (inches)"
+          min={0.1}
+          max={5}
           step={0.1}
-          defaultValue={5.4}
+          defaultValue={2.4}
         />
         <RangeSlider
           handleChange={handleChangeAge}
