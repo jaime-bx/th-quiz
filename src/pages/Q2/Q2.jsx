@@ -50,7 +50,7 @@ const Q2 = () => {
         </p>
         <RangeSlider
           handleChange={handleChangeLength}
-          tip="Increase by (inches)"
+          tip="Desired length (inches)"
           min={3.8}
           max={6.9}
           step={0.1}
